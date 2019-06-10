@@ -23,6 +23,9 @@ body {
 	overflow-wrap: break-word;
 	margin-bottom: 4px;
 }
+.server {
+	background: rgb(251, 186, 8);
+}
 .me {
 	justify-self: end;
 	background: rgb(0, 153, 255);
