@@ -1,6 +1,7 @@
 let messages = document.getElementsByClassName('message-list')[0];
 let message_input = document.getElementById('message-input');
 let message_form = document.getElementById('message-form');
+let sound = document.getElementsByTagName('audio')[0];
 
 let socket = io();
 
@@ -39,6 +40,7 @@ socket.on('message', (message) => {
     new_message.className = 'message';
     messages.append(new_message);
     messages.scrollTop = messages.scrollHeight;
+    sound.play();
 });
 
 socket.on('your_ip', (ip) => {
